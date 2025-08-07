@@ -92,11 +92,11 @@ const Chat = () => {
                           ol: ({ node, ...props }) => <ol className="list-decimal pl-5 mb-2" {...props} />,
                           li: ({ node, ...props }) => <li className="mb-1" {...props} />,
                           a: ({ node, ...props }) => (
-                            <a 
-                              className="text-blue-400 hover:text-blue-300 underline break-all" 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              {...props} 
+                            <a
+                              className="text-blue-400 hover:text-blue-300 underline break-all"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              {...props}
                             />
                           ),
                           code: ({ node, ...props }) => (
@@ -132,7 +132,7 @@ const Chat = () => {
           </SimpleBar>
         </div>
 
-        {/* Input Area */}
+        {/* Input Area with icon button */}
         <div className="flex border-t border-gray-700 bg-[#131a2d]">
           <input
             type="text"
@@ -140,16 +140,16 @@ const Chat = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSend()}
             placeholder="Type your message..."
-            className="flex-grow px-6 py-4 text-base bg-[#131a2d] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/30 rounded-bl-2xl"
+            className="flex-grow px-4 py-4 text-base bg-[#131a2d] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/30 rounded-bl-2xl"
           />
           <button
             onClick={handleSend}
             disabled={loading}
-            className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 text-base rounded-br-2xl transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-purple-500/50 ${
+            className={`flex items-center justify-center text-white text-2xl px-4 py-2 rounded-br-2xl bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-purple-500/50 ${
               loading ? "opacity-70 cursor-not-allowed" : "hover:from-blue-700 hover:to-purple-700 hover:scale-105"
             }`}
           >
-            Send
+            📤
           </button>
         </div>
       </div>
