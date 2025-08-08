@@ -50,7 +50,7 @@ const Chat = () => {
       transition={{ duration: 1 }}
     >
       <div className="w-full max-w-2xl bg-[#0e1320] shadow-2xl rounded-2xl border border-gray-700 flex flex-col h-[85vh] min-h-[500px] max-h-[700px] overflow-hidden">
-        {/* Header */}
+
         <div className="bg-[#131a2d] px-6 py-4 border-b border-gray-700 text-center">
           <h1 className="text-2xl font-semibold text-white tracking-tight flex items-center justify-center">
             <motion.span
@@ -60,7 +60,7 @@ const Chat = () => {
             >
               🌙
             </motion.span>
-            LunaBot
+            LunaBot v1
           </h1>
         </div>
 
